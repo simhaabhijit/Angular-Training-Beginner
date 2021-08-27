@@ -1,0 +1,20 @@
+<h2>Products</h2>
+
+<div class="products" *ngIf="products.length">
+    <div class="product" *ngFor="let product of products">
+        <div>{{product.productName}}</div>
+        <img [src]="product.imageUrl"/>
+        <div>{{product.description}}</div>
+        <div>{{product.starRating}}</div>
+    </div>
+</div>
+
+
+<!-- "productId": 1,
+        "productName": "Leaf Rake",
+        "productCode": "GDN-0011",
+        "releaseDate": "March 19, 2016",
+        "description": "Leaf rake with 48-inch wooden handle.",
+        "price": 19.95,
+        "starRating": 3.2,
+        "imageUrl": "http://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png" -->
