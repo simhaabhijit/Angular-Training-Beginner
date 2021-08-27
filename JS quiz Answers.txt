@@ -1,0 +1,84 @@
+//Question: What is the value of foo?
+var foo = 10 + '20';
+
+"1020" -> 10 gets concatenated with string 20
+
+//Question: What is the value of foo?
+var foo = 10 + 30 + '20';
+
+"4020" -> parsing happens left to right so 10+30 is 40 and 40 gets concatenated with string 20
+
+//Question: What is the value of foo?
+var foo = 10*20+30;
+
+230 -> operator precedence '*' has higer precedence over '+' so 230
+
+//Question: What is the value of window.bar?
+( window.bar || ( window.bar = "bar" ) );
+
+"bar" -> there is no variable declared with name bar in window object so the last value of conitional OR is evaluated and window.bar is initialized to "bar" returns it as it i true
+
+//Question: What is the outcome of the two alerts below?
+  var foo = "Hello";
+  (function() {
+  var bar = " World";
+  alert(foo + bar);
+  })();
+  alert(foo + bar);
+  
+  -> only one alert "Hello World" becaus bar declared inside the immediately invoked function and is not accessibile outside of it
+  
+//Question: What is the value of foo.length?
+var foo = [];
+foo.push(1);
+foo.push(2);  
+
+2 -> Array length starts from 1 and index starts from 0
+
+//Question: What is the value of foo?
+var foo = {n: 1};
+var bar = foo;
+bar.o = 'p';
+
+{n: 1, o: "p"} -> shallow copy, both have same reference address so foo also gets updated.
+
+//Question: What is the value of foo?
+var foo = {n: 1};
+var bar = {...foo};
+bar.o = 'p';
+
+{n: 1} -> deep copy, both do not have same reference address as foo is destructured using a spread operator before assigning it to bar, hence both do not have sme reference address.
+
+//Question: What does the following code print?
+console.log('one');
+setTimeout(function() {
+	console.log('two');
+},0);
+console.log('three');
+console.log('three1');
+
+one three three1 two -> setTimeout gets excecuted after time is runout and also after current block is excecuted
+
+//Question: What does the following code print ?
+
+greet();
+
+function greet(){
+	console.log('Hello Gurdeep');
+}
+
+Hello Gurdeep -> hoisting - functions get hoisted while the parsing is done
+
+//Question: What does the following code print ?
+
+nameLessFunction();
+
+var nameLessFunction = function(){
+	console.log('Hello');
+}
+
+TypeError: nameLessFunction is not a function -> here it is function is assigend to a variable and variable do get hoisted but will not be intialized unitl they are compiled/excecuted so the error "nameLessFunction is not a function"
+
+
+
+

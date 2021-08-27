@@ -1,0 +1,59 @@
+//Question: What is the value of foo?
+var foo = 10 + '20';
+
+//Question: What is the value of foo?
+var foo = 10 + 30 + '20';
+
+//Question: What is the value of foo?
+var foo = 10*20+30;
+
+//Question: What is the value of window.bar?
+( window.bar || ( window.bar = "bar" ) );
+
+//Question: What is the outcome of the two alerts below?
+  var foo = "Hello";
+  (function() {
+  var bar = " World";
+  alert(foo + bar);
+  })();
+  alert(foo + bar);
+  
+  
+//Question: What is the value of foo.length?
+var foo = [];
+foo.push(1);
+foo.push(2);
+
+//Question: What is the value of foo?
+var foo = {n: 1};
+var bar = foo;
+bar.o = 'p';
+
+//Question: What is the value of foo?
+var foo = {n: 1};
+var bar = {...foo};
+bar.o = 'p';
+
+//Question: What does the following code print?
+console.log('one');
+setTimeout(function() {
+	console.log('two');
+},0);
+console.log('three');
+console.log('three1');
+
+//Question: What does the following code print ?
+
+greet();
+
+function greet(){
+	console.log('Hello Gurdeep');
+}
+
+//Question: What does the following code print ?
+
+nameLessFunction();
+
+var nameLessFunction = function(){
+	console.log('Hello');
+}
